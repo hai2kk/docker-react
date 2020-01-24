@@ -6,4 +6,4 @@ before_install:
     - docker build -t krishna/docker-react -f Dockerfile.dev . 
 
 script:
-    - docker run -e CI=true krishna/docker-react npm run test
+    - docker run -e krishna/docker-react set CI=true&&npm run build
